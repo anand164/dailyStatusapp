@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'image_overlay.dart';
+// import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
 
-  WidgetsFlutterBinding.ensureInitialized();
-  await
-  Supabase.initialize
-    ( url: 'https://supabase.com/dashboard/project/vemywqolvufohrlstqab',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlbXl3cW9sdnVmb2hybHN0cWFiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgwNDc0NjAsImV4cCI6MjA4MzYyMzQ2MH0.5gjnvDa1yS7m95FTw41BJnrRL2Lg2sNM2w7AyVpGx3g', );
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await
+  // Supabase.initialize
+  //   ( url: 'https://supabase.com/dashboard/project/vemywqolvufohrlstqab',
+  //   anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlbXl3cW9sdnVmb2hybHN0cWFiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgwNDc0NjAsImV4cCI6MjA4MzYyMzQ2MH0.5gjnvDa1yS7m95FTw41BJnrRL2Lg2sNM2w7AyVpGx3g', );
 
 
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -38,9 +40,9 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const ImageOverlayPage(),
     );
   }
 }
